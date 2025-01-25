@@ -35,8 +35,4 @@ This project showcases advanced app development practices, including:
 - Implementing efficient navigation and routing in Flutter.  
 - Writing **optimized backend queries** with Firebase.  
 - Managing application state effectively using **Riverpod**.  
-
-## Purpose  
-ThinkNest is a demonstration of a modern, production-ready social media platform built with clean and modular code. It emphasizes user-centric design, efficient backend integration, and scalable development practices.  
-
-Feel free to explore the repository, contribute, or use it as a learning resource!  
+earning resource!  
