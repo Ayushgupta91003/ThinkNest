@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "68309394433",
+    "project_id": "thinknest-a619d",
+    "storage_bucket": "thinknest-a619d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68309394433:android:221ad2d0d473bda5874c00",
+        "android_client_info": {
+          "package_name": "com.example.thinknest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALgrmRR96qX43X8Ym8Uqosqac_vs9Z6v8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
