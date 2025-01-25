@@ -12,7 +12,20 @@
           "package_name": "com.example.thinknest"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "68309394433-2cu4ordve7uik2d63obqsl58ee1dm03a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.thinknest",
+            "certificate_hash": "fa92420e389b543301b02d92bf4374dd03102f61"
+          }
+        },
+        {
+          "client_id": "68309394433-010p9tl125vig6a1bq8svlial06ksll2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyALgrmRR96qX43X8Ym8Uqosqac_vs9Z6v8"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "68309394433-010p9tl125vig6a1bq8svlial06ksll2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "68309394433-71ve9pfgihi4oovf432jfe039sjmi357.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.thinknest"
+              }
+            }
+          ]
         }
       }
     }

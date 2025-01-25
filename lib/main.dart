@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:thinknest/features/auth/screens/login_screen.dart';
 import 'package:thinknest/firebase_options.dart';
 import 'package:thinknest/theme/pallete.dart';
@@ -10,7 +11,11 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   debugPrint('Firebase Initialized');
-  runApp(const MyApp());
+  runApp(
+    const ProviderScope(
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {

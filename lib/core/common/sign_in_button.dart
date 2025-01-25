@@ -1,16 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:thinknest/core/constants/constants.dart';
+import 'package:thinknest/features/auth/controller/auth_controller.dart';
 import 'package:thinknest/theme/pallete.dart';
 
-class SignInButton extends StatelessWidget {
+class SignInButton extends ConsumerWidget {
   const SignInButton({super.key});
 
+  void signInWithGoogle(WidgetRef ref) {
+    ref.read(authControllerProvider).signInWithGoogle();
+  }
+
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: ElevatedButton.icon(
-        onPressed: () {},
+        onPressed: () => signInWithGoogle(ref),
         icon: Image.asset(Constants.googlePath, width: 35),
         label: Text(
           'Continue with Google',
