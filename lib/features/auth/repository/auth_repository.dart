@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:thinknest/core/constants/constants.dart';
 import 'package:thinknest/core/providers/firebase_providers.dart';
 import 'package:thinknest/models/user_model.dart';
 
@@ -12,7 +13,6 @@ final authRepositoryProvider = Provider(
     googleSignIn: ref.read(googleSignInProvider),
   ),
 );
-
 
 class AuthRepository {
   final FirebaseFirestore _firestore;
@@ -40,8 +40,14 @@ class AuthRepository {
           await _auth.signInWithCredential(credential);
       // print(userCredential.user?.email);
 
-      // UserModel userModel = UserModel(name: name, profilePic: profilePic, banner: banner, uid: uid, isAuthenticated: isAuthenticated, karma: karma, awards: awards)
-
+      UserModel userModel = UserModel(
+          name: userCredential.user!.displayName ?? 'No Name',
+          profilePic: userCredential.user!.photoURL ?? Constants.avatarDefault,
+          banner: Constants.bannerDefault,
+          uid: userCredential.user!.uid,
+          isAuthenticated: true,
+          karma: 0,
+          awards: []);
     } catch (e) {
       print(e);
     }
