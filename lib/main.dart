@@ -23,6 +23,7 @@ void main() async {
     // androidProvider: AndroidProvider.playIntegrity,
     // appleProvider: AppleProvider.appAttest,
   );
+  await FirebaseAppCheck.instance.setTokenAutoRefreshEnabled(true);
   debugPrint('Firebase Initialized');
   runApp(
     const ProviderScope(

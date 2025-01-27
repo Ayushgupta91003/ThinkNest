@@ -55,3 +55,12 @@ dependencies {
     // OR
     implementation 'com.google.firebase:firebase-appcheck-playintegrity' // For Play Integrity
 }
+
+
+// dependencies {
+//     implementation platform('com.google.firebase:firebase-bom:28.4.0')
+//     implementation 'com.google.firebase:firebase-analytics'
+//     implementation 'com.google.firebase:firebase-appcheck-debug:16.0.0-beta02'
+//     implementation 'com.google.android.gms:play-services-auth:19.0.0'
+// }
+// apply plugin: 'com.google.gms.google-services'
