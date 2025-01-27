@@ -13,7 +13,6 @@ class Pallete {
   static const greyColor = Color.fromRGBO(26, 39, 45, 1); // secondary color
   static const drawerColor = Color.fromRGBO(18, 18, 18, 1);
   static const whiteColor = Colors.white;
-  static const whiteFieldColor = Colors.white24;
   static var redColor = Colors.red.shade500;
   static var blueColor = Colors.blue.shade300;
 
@@ -27,15 +26,13 @@ class Pallete {
         color: whiteColor,
       ),
     ),
-    inputDecorationTheme: const InputDecorationTheme(
-      fillColor: greyColor,
-    ),
     drawerTheme: const DrawerThemeData(
       backgroundColor: drawerColor,
     ),
     primaryColor: redColor,
-    // backgroundColor:
-    //     drawerColor, // will be used as alternative background color
+    colorScheme: ThemeData.dark().colorScheme.copyWith(
+          surface: drawerColor, // Use surface instead of background
+        ),
   );
 
   static var lightModeAppTheme = ThemeData.light().copyWith(
@@ -48,14 +45,13 @@ class Pallete {
         color: blackColor,
       ),
     ),
-    inputDecorationTheme: const InputDecorationTheme(
-      fillColor: whiteFieldColor,
-    ),
     drawerTheme: const DrawerThemeData(
       backgroundColor: whiteColor,
     ),
     primaryColor: redColor,
-    // backgroundColor: whiteColor,
+    colorScheme: ThemeData.light().colorScheme.copyWith(
+          surface: whiteColor, // Use surface instead of background
+        ),
   );
 }
 
@@ -63,7 +59,9 @@ class ThemeNotifier extends StateNotifier<ThemeData> {
   ThemeMode _mode;
   ThemeNotifier({ThemeMode mode = ThemeMode.dark})
       : _mode = mode,
-        super(Pallete.darkModeAppTheme) {
+        super(
+          Pallete.darkModeAppTheme,
+        ) {
     getTheme();
   }
 

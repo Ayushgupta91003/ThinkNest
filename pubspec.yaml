@@ -80,7 +80,11 @@ flutter:
   assets:
     - assets/images/
     - assets/images/awards/
-    - assets/svgs/
+    # - assets/svgs/
+    - assets/images/awards/
+    - assets/images/google.png
+    - assets/images/loginEmote.png
+    - assets/images/logo.png
     # - assets/google.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
