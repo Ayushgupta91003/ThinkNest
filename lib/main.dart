@@ -12,25 +12,54 @@ import 'package:thinknest/router.dart';
 import 'package:thinknest/theme/pallete.dart';
 import 'package:routemaster/routemaster.dart';
 
+
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
-  await FirebaseAppCheck.instance.activate(
-    // webProvider: ReCaptchaV3Provider('recaptcha-v3-site-key'),
-    androidProvider: AndroidProvider.debug,
-    // androidProvider: AndroidProvider.playIntegrity,
-    // appleProvider: AppleProvider.appAttest,
-  );
-  await FirebaseAppCheck.instance.setTokenAutoRefreshEnabled(true);
-  debugPrint('Firebase Initialized');
+  try {
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+    await FirebaseAppCheck.instance.activate(
+      androidProvider: AndroidProvider.playIntegrity,
+    );
+  } catch (e) {
+    print('Firebase initialization error: $e');
+  }
   runApp(
     const ProviderScope(
       child: MyApp(),
     ),
   );
 }
+
+
+
+
+
+
+
+
+
+// void main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+//   await Firebase.initializeApp(
+//     options: DefaultFirebaseOptions.currentPlatform,
+//   );
+//   await FirebaseAppCheck.instance.activate(
+//     // webProvider: ReCaptchaV3Provider('recaptcha-v3-site-key'),
+//     androidProvider: AndroidProvider.debug,
+//     // androidProvider: AndroidProvider.playIntegrity,
+//     // appleProvider: AppleProvider.appAttest,
+//   );
+//   // await FirebaseAppCheck.instance.setTokenAutoRefreshEnabled(true);
+//   debugPrint('Firebase Initialized');
+//   runApp(
+//     const ProviderScope(
+//       child: MyApp(),
+//     ),
+//   );
+// }
 
 // void main() async {
 //   WidgetsFlutterBinding.ensureInitialized();
