@@ -100,4 +100,4 @@ This project showcases advanced app development practices, including:
 <!-- ## Purpose  
 ThinkNest is a demonstration of a modern, production-ready social media platform built with clean and modular code. It emphasizes user-centric design, efficient backend integration, and scalable development practices.  
 
-Feel free to explore the repository, contribute, or use it as a learning resource!   --> -->
+Feel free to explore the repository, contribute, or use it as a learning resource!   -->
